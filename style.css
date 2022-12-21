@@ -11,7 +11,9 @@ body{
     align-items: center;
     background-color: #05102B;
 }
-
+section{
+    height: 100vh;
+}
 #myCanvas{
     border: 5px solid #9DA4FF;
     box-shadow: 0 0 5px 0 #9DA4FF;
@@ -35,7 +37,6 @@ body{
     border-radius: 30px;
     background-color: yellow;
     font-size: 1.15rem;
-    display: block;
     box-shadow: 0 0 5px 0 yellow;
 }
 #start:hover{

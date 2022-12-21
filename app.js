@@ -28,12 +28,14 @@ function createSnake() {
         y: 0,
     };
 }
-// 執行最高分數 function
-loadHighestScore();
 
-// 初始遊戲分數
-let score  = 0;
-document.getElementById("myScore").innerHTML = "遊戲分數: " + score;
+
+let highestScore; // 最高分值為不確定
+loadHighestScore(); // 執行最高分數 function
+
+let score  = 0; // 初始遊戲分數
+document.getElementById("myScore").innerHTML = "遊戲分數: " + score; // 渲染在HTML上
+document.getElementById("myScore2").innerHTML = "最高分數: " + highestScore; // 渲染在HTML上
 
 // 果實是一個 obj
 class Fruit {
@@ -174,7 +176,9 @@ for(let i = 1; i < snake.length; i++) {
         // 畫出新果實
         // 更新score
         score++;
+        setHighestScore(score);
         document.getElementById("myScore").innerHTML = "遊戲分數: " + score;
+        document.getElementById("myScore2").innerHTML = "最高分數: " + highestScore;
     }else {
         snake.pop();// 刪除最後面的值
     }
@@ -187,6 +191,18 @@ for(let i = 1; i < snake.length; i++) {
 let myGame = setInterval(draw, 100); // 每0.1秒就會執行一次 draw
 
 function loadHighestScore() {
-    console.log(localStorage.getItem("highestScore"));
+    if(localStorage.getItem("highestScore") == null){
+        highestScore = 0;
+    } else {
+        highestScore = Number(localStorage.getItem("highestScore"));
+        // 因localStorage 取出來的值是string，要改成Number
+    }
     
+}
+
+function setHighestScore(score) {
+    if (score > highestScore) {
+        localStorage.setItem("highestScore", score);
+        highestScore = score;
+    }
 }
