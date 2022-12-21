@@ -30,6 +30,7 @@ function createSnake() {
 }
 // 執行最高分數 function
 loadHighestScore();
+
 // 初始遊戲分數
 let score  = 0;
 document.getElementById("myScore").innerHTML = "遊戲分數: " + score;
