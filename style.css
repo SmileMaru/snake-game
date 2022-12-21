@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #05102B;
+}
+
+#myCanvas{
+    border: 5px solid #9DA4FF;
+    box-shadow: 0 0 5px 0 #9DA4FF;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#myScore{
+    margin-top: 1rem;
+}
+
+#myScore, #myScore2 {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+#start{
+    padding: 1rem;
+    border-radius: 30px;
+    background-color: yellow;
+    font-size: 1.15rem;
+    display: block;
+    box-shadow: 0 0 5px 0 yellow;
+}
+#start:hover{
+    background-color: #FFF385;
+}
