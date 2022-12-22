@@ -5,14 +5,17 @@
 }
 
 body{
-    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #05102B;
+    height: 100vh;
 }
 section{
-    height: 100vh;
+    text-align: center;
+}
+section p{
+    margin: 0;
 }
 #myCanvas{
     border: 5px solid #9DA4FF;
@@ -23,7 +26,7 @@ section{
     transform: translate(-50%, -50%);
 }
 #myScore{
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 #myScore, #myScore2 {
@@ -38,7 +41,14 @@ section{
     background-color: yellow;
     font-size: 1.15rem;
     box-shadow: 0 0 5px 0 yellow;
+    margin-top: 1rem;
 }
 #start:hover{
     background-color: #FFF385;
+}
+
+@media only screen and (max-width: 414px){
+    #myCanvas{
+        margin-top: 110px;
+    }
 }
